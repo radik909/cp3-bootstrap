@@ -57,6 +57,25 @@ export default function App() {
           </div>
         </div>
       </header>
+      <main className="main">
+        <div className="toolbar">
+          <p className="heading">Viewing 20 of 200 Results</p>
+          <div>
+            <button className="btn btn-light" type="button">
+              <span className="center-flex">
+                <span className="material-icons btn-icon">add_circle</span>
+                <span className="ml-1">Create</span>
+              </span>
+            </button>
+            <button className="ml-2 btn btn-light" type="button">
+              <span className="center-flex">
+                <span className="material-icons btn-icon">get_app</span>
+                <span className="ml-1">Export</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
