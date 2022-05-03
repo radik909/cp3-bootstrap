@@ -8,6 +8,13 @@ import {
 import Checkbox from "./Checkbox";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
+import Select from "react-select";
+
+const options = [
+  { value: "chocolate", label: "Chocolate" },
+  { value: "strawberry", label: "Strawberry" },
+  { value: "vanilla", label: "Vanilla" },
+];
 
 export default function App() {
   const [modalShow, setModalShow] = useState(false);
@@ -264,10 +271,7 @@ export default function App() {
             <h4 className="notes-header">Search Filters</h4>
             <form autoComplete="off" noValidate>
               <div className="form-group row">
-                <label
-                  htmlFor="inputEmail3"
-                  className="col-sm-2 col-form-label text-right"
-                >
+                <label className="col-sm-2 col-form-label text-right">
                   Search Within
                 </label>
                 <div className="col-sm-10">
@@ -291,20 +295,30 @@ export default function App() {
                 </div>
               </div>
               <div className="form-group row">
-                <label
-                  htmlFor="inputPassword3"
-                  className="col-sm-2 col-form-label text-right"
-                >
-                  Password
+                <label className="col-sm-2 col-form-label text-right">
+                  Label
                 </label>
                 <div className="col-sm-10">
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="inputPassword3"
-                    placeholder="Password"
+                  <Select
+                    isMulti
+                    name="colors"
+                    options={options}
+                    className="basic-multi-select"
+                    classNamePrefix="select"
                   />
                 </div>
+              </div>
+              <div className="form-group row">
+                <label className="col-sm-2 col-form-label text-right">
+                  Leak Date
+                </label>
+                <div className="col-sm-10"></div>
+              </div>
+              <div className="form-group row">
+                <label className="col-sm-2 col-form-label text-right">
+                  Release Date
+                </label>
+                <div className="col-sm-10"></div>
               </div>
               <div className="notes-modal-footer">
                 <button type="submit" className="btn btn-main btn-36">
