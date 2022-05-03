@@ -90,44 +90,53 @@ export default function App() {
             </button>
           </div>
         </div>
-        <table className="table table-hover">
-          <thead>
-            <tr>
-              <th>
-                <input type="checkbox" />
-              </th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>mark_ott</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>fatty</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td>Larry the Bird</td>
-              <td>Thoron</td>
-              <td>larry_bird</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table className="table table-hover">
+            <thead>
+              <tr>
+                <th>
+                  <input type="checkbox" />
+                </th>
+                <th scope="col">Track Title</th>
+                <th scope="col">Artist</th>
+                <th scope="col">ISRC</th>
+                <th scope="col">Label</th>
+                <th scope="col">Policy</th>
+                <th scope="col">Leak Date</th>
+                <th scope="col">Release Date</th>
+                <th className="icon-action" scope="col">
+                  Notes
+                </th>
+                <th className="icon-action" scope="col">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                <tr key={item}>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td>Some Track title {item}</td>
+                  <td>Some Artist</td>
+                  <td>123456789</td>
+                  <td>Universal Musuc</td>
+                  <td>Block</td>
+                  <td>01/01/2022</td>
+                  <td>01/01/2022</td>
+                  <td className="icon-action">
+                    <span className="material-icons">question_answer</span>
+                  </td>
+                  <td className="icon-action">
+                    <span className="material-icons">edit</span>
+                    <span className="material-icons ml-3">delete</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </main>
     </div>
   );

@@ -147,3 +147,14 @@ input[type="text"]:focus {
 .page-count > .heading {
   display: inline-block;
 }
+.table thead th {
+  height: 60px;
+  vertical-align: middle;
+}
+.table tbody td {
+  height: 60px;
+  vertical-align: middle;
+}
+.icon-action {
+  text-align: center;
+}
