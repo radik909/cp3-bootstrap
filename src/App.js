@@ -90,6 +90,44 @@ export default function App() {
             </button>
           </div>
         </div>
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" />
+              </th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>mark_ott</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>fatty</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>Larry the Bird</td>
+              <td>Thoron</td>
+              <td>larry_bird</td>
+            </tr>
+          </tbody>
+        </table>
       </main>
     </div>
   );
