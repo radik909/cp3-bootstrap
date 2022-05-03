@@ -109,7 +109,7 @@ export default function App() {
           <table className="table table-hover">
             <thead>
               <tr>
-                <th>
+                <th className="t-checkbox">
                   <Checkbox />
                 </th>
                 <th scope="col">Track Title</th>
@@ -130,7 +130,7 @@ export default function App() {
             <tbody>
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
                 <tr key={item}>
-                  <td>
+                  <td className="t-checkbox">
                     <Checkbox />
                   </td>
                   <td>Some Track title {item}</td>

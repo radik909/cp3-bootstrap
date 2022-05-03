@@ -166,6 +166,10 @@ input[type="text"]:focus {
   height: 60px;
   vertical-align: middle;
 }
+th.t-checkbox,
+td.t-checkbox {
+  width: 20px;
+}
 .pointer {
   cursor: pointer;
 }
