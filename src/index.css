@@ -72,6 +72,11 @@ a.nav-link {
 .btn.icon-button:hover {
   background-color: #f5f5f5;
 }
+.form-control:focus {
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+  box-shadow: none;
+}
 input[type="text"]:focus {
   border-color: #fff;
   -webkit-box-shadow: none;
@@ -110,7 +115,7 @@ input[type="text"]:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
   height: 40px;
 }
 .heading {
@@ -127,6 +132,9 @@ input[type="text"]:focus {
 .btn-main {
   background-color: #f57f17;
   color: #fff;
+}
+.btn-36 {
+  height: 36px;
 }
 .btn-light {
   background-color: #f5f5f5;
@@ -194,3 +202,36 @@ ul.pagination {
   margin-bottom: 0;
 }
 /* END */
+.notes-modal {
+  padding: 24px 40px;
+}
+.x-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  cursor: pointer;
+}
+.notes-header {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+.notes-modal-footer {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.light-background {
+  background-color: #f5f5f5;
+}
+.notes-list {
+  max-height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 19px;
+}
+.list-group-item {
+  padding: 16px 0px;
+  min-height: 56px;
+}

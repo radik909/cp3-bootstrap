@@ -1,8 +1,17 @@
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import {
+  DropdownButton,
+  Dropdown,
+  Modal,
+  Form,
+  ListGroup,
+} from "react-bootstrap";
 import Checkbox from "./Checkbox";
 import ReactPaginate from "react-paginate";
+import { useState } from "react";
 
 export default function App() {
+  const [modalShow, setModalShow] = useState(false);
+
   const handlePageChange = (e) => {
     console.log(e.selected);
   };
@@ -21,7 +30,7 @@ export default function App() {
             <li className="nav-item">
               <a className="nav-link" href="#">
                 <span className="material-icons">account_circle</span>
-                &nbsp;Welcome, John Doe
+                &nbsp;Welcome, Raman Dineshkumar
               </a>
             </li>
             <li className="nav-item">
@@ -141,7 +150,10 @@ export default function App() {
                   <td>01/01/2022</td>
                   <td>01/01/2022</td>
                   <td className="text-center">
-                    <span className="material-icons pointer">
+                    <span
+                      className="material-icons pointer"
+                      onClick={() => setModalShow(true)}
+                    >
                       question_answer
                     </span>
                   </td>
@@ -154,6 +166,82 @@ export default function App() {
             </tbody>
           </table>
         </div>
+        <Modal
+          show={modalShow}
+          animation={false}
+          onHide={() => setModalShow(false)}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
+          <div className="notes-modal">
+            <span
+              className="material-icons x-close"
+              onClick={() => setModalShow(false)}
+            >
+              cancel
+            </span>
+            <h4 className="notes-header">Notes for Some Track Title 1</h4>
+            <div className="notes-list">
+              <ListGroup variant="flush">
+                <ListGroup.Item>
+                  <div className="row">
+                    <div className="col-md-4">
+                      Raman Dineshkumar - 03/22/2017
+                    </div>
+                    <div className="col-md-8">
+                      Some initial note left on the item from RAMA.
+                    </div>
+                  </div>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <div className="row">
+                    <div className="col-md-4">
+                      Raman Dineshkumar - 03/22/2017
+                    </div>
+                    <div className="col-md-8">
+                      Another note added at a later date that’s intentionally
+                      longer to display how a longer message might appear.
+                    </div>
+                  </div>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <div className="row">
+                    <div className="col-md-4">
+                      Raman Dineshkumar - 03/22/2017
+                    </div>
+                    <div className="col-md-8">Another note left later on.</div>
+                  </div>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <div className="row">
+                    <div className="col-md-4">
+                      Raman Dineshkumar - 03/22/2017
+                    </div>
+                    <div className="col-md-8">Another note left later on.</div>
+                  </div>
+                </ListGroup.Item>
+              </ListGroup>
+            </div>
+            <Form.Group>
+              <Form.Control
+                className="light-background"
+                as="textarea"
+                placeholder="Create a New Note..."
+                rows={3}
+              />
+            </Form.Group>
+            <div className="notes-modal-footer">
+              <button className="btn btn-main btn-36">Submit</button>
+              <button
+                onClick={() => setModalShow(false)}
+                className="ml-3 btn btn-light btn-36"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </Modal>
       </main>
     </div>
   );
