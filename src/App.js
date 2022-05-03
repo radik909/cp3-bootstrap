@@ -1,7 +1,12 @@
 import { DropdownButton, Dropdown } from "react-bootstrap";
 import Checkbox from "./Checkbox";
+import ReactPaginate from "react-paginate";
 
 export default function App() {
+  const handlePageChange = (e) => {
+    console.log(e.selected);
+  };
+
   return (
     <div>
       <header className="header">
@@ -66,6 +71,25 @@ export default function App() {
             </DropdownButton>
             <p className="heading">&nbsp;of 200 Results</p>
           </div>
+          <ReactPaginate
+            pageCount={10}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={3}
+            onPageChange={handlePageChange}
+            previousLabel={"<<"}
+            nextLabel=">>"
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            previousClassName="page-item"
+            previousLinkClassName="page-link"
+            nextClassName="page-item"
+            nextLinkClassName="page-link"
+            breakLabel="..."
+            breakClassName="page-item"
+            breakLinkClassName="page-link"
+            containerClassName="pagination"
+            activeClassName="active"
+          />
           <div>
             <button className="btn btn-light" type="button">
               <span className="center-flex">
