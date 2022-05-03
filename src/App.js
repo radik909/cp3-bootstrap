@@ -1,3 +1,5 @@
+import { DropdownButton, Dropdown } from "react-bootstrap";
+
 export default function App() {
   return (
     <div>
@@ -59,7 +61,20 @@ export default function App() {
       </header>
       <main className="main">
         <div className="toolbar">
-          <p className="heading">Viewing 20 of 200 Results</p>
+          <p className="heading">
+            Viewing
+            <DropdownButton
+              variant="warning"
+              size="sm"
+              title="10"
+              className="dropdown-views-count"
+            >
+              <Dropdown.Item>10</Dropdown.Item>
+              <Dropdown.Item>25</Dropdown.Item>
+              <Dropdown.Item>50</Dropdown.Item>
+            </DropdownButton>
+            of 200 Results
+          </p>
           <div>
             <button className="btn btn-light" type="button">
               <span className="center-flex">

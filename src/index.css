@@ -106,6 +106,7 @@ input[type="text"]:focus {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
+  white-space: nowrap;
 }
 .center-flex {
   display: flex;
@@ -122,4 +123,19 @@ input[type="text"]:focus {
 }
 .btn-icon {
   font-size: 20px;
+}
+.dropdown-views-count > .btn {
+  min-width: 50px !important;
+  width: 50px !important;
+  background-color: #e2e6ea;
+  color: #212121;
+  border: none;
+}
+.dropdown-views-count > .dropdown-menu {
+  min-width: 50px !important;
+  width: 50px !important;
+}
+.dropdown-views-count > .dropdown-menu > .dropdown-item {
+  padding-top: 5px;
+  padding-left: 15px;
 }
