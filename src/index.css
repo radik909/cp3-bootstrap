@@ -62,6 +62,9 @@ a.nav-link {
   align-items: center;
   justify-content: center;
 }
+.btn.icon-button:hover {
+  background-color: #f5f5f5;
+}
 input[type="text"]:focus {
   border-color: #fff;
   -webkit-box-shadow: none;
@@ -118,7 +121,7 @@ input[type="text"]:focus {
   color: #fff;
 }
 .btn-light {
-  background-color: #e2e6ea;
+  background-color: #f5f5f5;
   color: #212121;
 }
 .btn-icon {
@@ -127,7 +130,7 @@ input[type="text"]:focus {
 .dropdown-views-count > .btn {
   min-width: 50px !important;
   width: 50px !important;
-  background-color: #e2e6ea;
+  background-color: #f5f5f5;
   color: #212121;
   border: none;
 }
@@ -155,6 +158,6 @@ input[type="text"]:focus {
   height: 60px;
   vertical-align: middle;
 }
-.icon-action {
-  text-align: center;
+.pointer {
+  cursor: pointer;
 }

@@ -90,7 +90,7 @@ export default function App() {
             </button>
           </div>
         </div>
-        <div class="table-responsive">
+        <div className="table-responsive">
           <table className="table table-hover">
             <thead>
               <tr>
@@ -104,10 +104,10 @@ export default function App() {
                 <th scope="col">Policy</th>
                 <th scope="col">Leak Date</th>
                 <th scope="col">Release Date</th>
-                <th className="icon-action" scope="col">
+                <th className="text-center" scope="col">
                   Notes
                 </th>
-                <th className="icon-action" scope="col">
+                <th className="text-center" scope="col">
                   Actions
                 </th>
               </tr>
@@ -125,12 +125,14 @@ export default function App() {
                   <td>Block</td>
                   <td>01/01/2022</td>
                   <td>01/01/2022</td>
-                  <td className="icon-action">
-                    <span className="material-icons">question_answer</span>
+                  <td className="text-center">
+                    <span className="material-icons pointer">
+                      question_answer
+                    </span>
                   </td>
-                  <td className="icon-action">
-                    <span className="material-icons">edit</span>
-                    <span className="material-icons ml-3">delete</span>
+                  <td className="text-center">
+                    <span className="material-icons pointer">edit</span>
+                    <span className="material-icons pointer ml-3">archive</span>
                   </td>
                 </tr>
               ))}
