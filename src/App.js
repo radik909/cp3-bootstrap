@@ -4,17 +4,7 @@ export default function App() {
   return (
     <div>
       <header className="header">
-        <img
-          style={{
-            position: "absolute",
-            height: "100px",
-            width: "200px",
-            top: "-15px",
-            left: "18px",
-          }}
-          src="/logo.png"
-          alt="logo"
-        />
+        <img className="logo" src="/logo.png" alt="logo" />
         <nav className="navbar navbar-expand-sm">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
