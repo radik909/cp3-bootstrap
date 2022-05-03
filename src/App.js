@@ -11,6 +11,7 @@ import { useState } from "react";
 
 export default function App() {
   const [modalShow, setModalShow] = useState(false);
+  const [filterModalShow, setFilterModalShow] = useState(false);
 
   const handlePageChange = (e) => {
     console.log(e.selected);
@@ -41,7 +42,11 @@ export default function App() {
           </ul>
         </nav>
         <div className="search-filter">
-          <button type="button" className="btn icon-button">
+          <button
+            type="button"
+            className="btn icon-button"
+            onClick={() => setFilterModalShow(true)}
+          >
             <span className="material-icons">settings</span>
           </button>
           <div className="input-group search-bar">
@@ -240,6 +245,80 @@ export default function App() {
                 Close
               </button>
             </div>
+          </div>
+        </Modal>
+        <Modal
+          show={filterModalShow}
+          animation={false}
+          onHide={() => setFilterModalShow(false)}
+          size="lg"
+          centered
+        >
+          <div className="notes-modal">
+            <span
+              className="material-icons x-close"
+              onClick={() => setFilterModalShow(false)}
+            >
+              cancel
+            </span>
+            <h4 className="notes-header">Search Filters</h4>
+            <form autoComplete="off" noValidate>
+              <div className="form-group row">
+                <label
+                  htmlFor="inputEmail3"
+                  className="col-sm-2 col-form-label text-right"
+                >
+                  Search Within
+                </label>
+                <div className="col-sm-10">
+                  <div className="row h-100">
+                    <div className="col-md-2 d-flex align-items-center">
+                      <Checkbox label="All" />
+                    </div>
+                    <div className="col-md-2 d-flex align-items-center">
+                      <Checkbox label="Title" />
+                    </div>
+                    <div className="col-md-2 d-flex align-items-center">
+                      <Checkbox label="Artist" />
+                    </div>
+                    <div className="col-md-2 d-flex align-items-center">
+                      <Checkbox label="ISRC" />
+                    </div>
+                    <div className="col-md-2 d-flex align-items-center">
+                      <Checkbox label="Notes" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="form-group row">
+                <label
+                  htmlFor="inputPassword3"
+                  className="col-sm-2 col-form-label text-right"
+                >
+                  Password
+                </label>
+                <div className="col-sm-10">
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="inputPassword3"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+              <div className="notes-modal-footer">
+                <button type="submit" className="btn btn-main btn-36">
+                  Apply
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setFilterModalShow(false)}
+                  className="ml-3 btn btn-light btn-36"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
           </div>
         </Modal>
       </main>
