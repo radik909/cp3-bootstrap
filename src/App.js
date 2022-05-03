@@ -1,4 +1,5 @@
 import { DropdownButton, Dropdown } from "react-bootstrap";
+import Checkbox from "./Checkbox";
 
 export default function App() {
   return (
@@ -85,7 +86,7 @@ export default function App() {
             <thead>
               <tr>
                 <th>
-                  <input type="checkbox" />
+                  <Checkbox />
                 </th>
                 <th scope="col">Track Title</th>
                 <th scope="col">Artist</th>
@@ -106,7 +107,7 @@ export default function App() {
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
                 <tr key={item}>
                   <td>
-                    <input type="checkbox" />
+                    <Checkbox />
                   </td>
                   <td>Some Track title {item}</td>
                   <td>Some Artist</td>
