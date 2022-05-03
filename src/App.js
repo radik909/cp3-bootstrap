@@ -61,8 +61,8 @@ export default function App() {
       </header>
       <main className="main">
         <div className="toolbar">
-          <p className="heading">
-            Viewing
+          <div className="page-count">
+            <p className="heading">Viewing&nbsp;</p>
             <DropdownButton
               variant="warning"
               size="sm"
@@ -73,8 +73,8 @@ export default function App() {
               <Dropdown.Item>25</Dropdown.Item>
               <Dropdown.Item>50</Dropdown.Item>
             </DropdownButton>
-            of 200 Results
-          </p>
+            <p className="heading">&nbsp;of 200 Results</p>
+          </div>
           <div>
             <button className="btn btn-light" type="button">
               <span className="center-flex">
