@@ -9,6 +9,7 @@ import Checkbox from "./Checkbox";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import Select from "react-select";
+import DatePicker from "react-date-picker";
 
 const options = [
   { value: "chocolate", label: "Chocolate" },
@@ -310,15 +311,48 @@ export default function App() {
               </div>
               <div className="form-group row">
                 <label className="col-sm-2 col-form-label text-right">
+                  Policy
+                </label>
+                <div className="col-sm-10">
+                  <Select
+                    name="colors"
+                    options={options}
+                    className="basic-multi-select"
+                    classNamePrefix="select"
+                  />
+                </div>
+              </div>
+              <div className="form-group row">
+                <label className="col-sm-2 col-form-label text-right">
                   Leak Date
                 </label>
-                <div className="col-sm-10"></div>
+                <div className="col-sm-10">
+                  <div className="row h-100">
+                    <div className="col-md-4 d-flex align-items-center">
+                      <DatePicker onChange={console.log} />
+                    </div>
+                    <div className="col-md-1 d-flex align-items-center">To</div>
+                    <div className="col-md-4 d-flex align-items-center">
+                      <DatePicker onChange={console.log} />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="form-group row">
                 <label className="col-sm-2 col-form-label text-right">
                   Release Date
                 </label>
-                <div className="col-sm-10"></div>
+                <div className="col-sm-10">
+                  <div className="row h-100">
+                    <div className="col-md-4 d-flex align-items-center">
+                      <DatePicker onChange={console.log} />
+                    </div>
+                    <div className="col-md-1 d-flex align-items-center">To</div>
+                    <div className="col-md-4 d-flex align-items-center">
+                      <DatePicker onChange={console.log} />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="notes-modal-footer">
                 <button type="submit" className="btn btn-main btn-36">
