@@ -134,8 +134,38 @@ export default function App() {
                 <th className="t-checkbox">
                   <Checkbox />
                 </th>
-                <th scope="col">Track Title</th>
-                <th scope="col">Artist</th>
+                <th scope="col">
+                  <div className="d-flex align-items-center">
+                    <span
+                      className="pointer"
+                      onClick={() => console.log("clicked")}
+                    >
+                      Track Title
+                    </span>
+                    <span
+                      className="material-icons pointer"
+                      onClick={() => console.log("clicked")}
+                    >
+                      expand_more
+                    </span>
+                  </div>
+                </th>
+                <th scope="col">
+                  <div className="d-flex align-items-center">
+                    <span
+                      className="pointer"
+                      onClick={() => console.log("clicked")}
+                    >
+                      Artist
+                    </span>
+                    <span
+                      className="material-icons pointer"
+                      onClick={() => console.log("clicked")}
+                    >
+                      expand_less
+                    </span>
+                  </div>
+                </th>
                 <th scope="col">ISRC</th>
                 <th scope="col">Label</th>
                 <th scope="col">Policy</th>
